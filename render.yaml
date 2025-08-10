@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: boletas-ocr
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    autoDeploy: true
+    envVars:
+      - key: PORT
+        value: 8000
